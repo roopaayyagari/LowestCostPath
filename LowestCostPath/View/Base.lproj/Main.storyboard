@@ -83,6 +83,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVw-g7-rM3">
+                                <rect key="frame" x="325" y="108" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="8MG-B7-7bW"/>
+                                    <constraint firstAttribute="height" constant="50" id="EHV-mK-VSm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <state key="normal" title="x"/>
+                                <connections>
+                                    <action selector="clearButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8hA-k9-XXB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
@@ -96,12 +108,14 @@
                             <constraint firstItem="Rmc-Bn-edI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LLL-Dr-AIp"/>
                             <constraint firstItem="qTv-V7-Nfk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Rjj-L3-grU"/>
                             <constraint firstItem="Jwb-AC-eNR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="V5c-bY-bNa"/>
+                            <constraint firstItem="HVw-g7-rM3" firstAttribute="top" secondItem="Jwb-AC-eNR" secondAttribute="bottom" constant="4" id="VWv-FS-pqn"/>
                             <constraint firstItem="zbB-UD-Czy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Y9y-SO-iZi"/>
                             <constraint firstItem="zbB-UD-Czy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Zfp-Ii-Sd0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jwb-AC-eNR" secondAttribute="trailing" id="dZt-Sa-UR0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="X0o-nP-O2z" secondAttribute="trailing" id="hEf-OB-Zsl"/>
                             <constraint firstItem="X0o-nP-O2z" firstAttribute="top" secondItem="Jwb-AC-eNR" secondAttribute="bottom" constant="10" id="iAM-G0-0YB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qTv-V7-Nfk" secondAttribute="trailing" id="izc-04-70f"/>
+                            <constraint firstItem="HVw-g7-rM3" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="jl7-4o-lxl"/>
                             <constraint firstItem="P4N-E2-bC9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="jvT-JX-zgb"/>
                             <constraint firstItem="Rmc-Bn-edI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kJu-uY-FFm"/>
                             <constraint firstItem="Jwb-AC-eNR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="ktE-kR-OFy"/>
@@ -114,6 +128,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Lowest Cost Path" id="vas-HY-jK5" colorLabel="IBBuiltInLabel-Green"/>
                     <connections>
+                        <outlet property="clearText" destination="HVw-g7-rM3" id="9NL-M6-2oz"/>
                         <outlet property="costTextView" destination="X0o-nP-O2z" id="X5x-Zr-ImL"/>
                         <outlet property="leastCost" destination="P4N-E2-bC9" id="v2a-DZ-CnM"/>
                         <outlet property="leastCostPath" destination="qTv-V7-Nfk" id="wfW-Wf-T13"/>
@@ -123,7 +138,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="785" y="-564"/>
+            <point key="canvasLocation" x="784.79999999999995" y="-564.46776611694156"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Yqa-sk-cFQ">

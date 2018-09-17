@@ -14,7 +14,7 @@ class MatrixTests: XCTestCase {
     func testInitWithEmptyCosts ()
     {
         let matrix = Matrix(listOfValues:[[]])
-        XCTAssertNotNil(matrix.matrix!)
+        XCTAssertNotNil(matrix.matrix)
         XCTAssertTrue(matrix.numberOfRows == 1)
         XCTAssertTrue(matrix.numberOfColumns == 0)
     }
@@ -22,7 +22,7 @@ class MatrixTests: XCTestCase {
     {
         let input = [[3, 4, 1, 2, 8, 6],[6, 1, 8, 2, 7, 4],[5, 9, 3, 9, 9, 5],[8, 4, 1, 3, 2, 6],[3, 7, 2, 8, 6, 4]]
         let matrix = Matrix(listOfValues: input)
-        XCTAssertNotNil(matrix.matrix!)
+        XCTAssertNotNil(matrix.matrix)
         XCTAssertTrue(matrix.numberOfRows == 5)
         XCTAssertTrue(matrix.numberOfColumns == 6)
     }
@@ -31,7 +31,7 @@ class MatrixTests: XCTestCase {
     {
         let input = [[3, 4, 1, 2, 8, 6],[6, 1, 8, 2, 7, 4],[5, 9, 3, 9, 9, 5],[8, 4, 1, 3, 2, 6],[3, 7, 2, 1, 2, 3]]
         let matrix = Matrix(listOfValues: input)
-        XCTAssertNotNil(matrix.matrix!)
+        XCTAssertNotNil(matrix.matrix)
         XCTAssertTrue(matrix.numberOfRows == 5)
         XCTAssertTrue(matrix.numberOfColumns == 6)
     }
@@ -40,7 +40,7 @@ class MatrixTests: XCTestCase {
     {
         let input = [[19, 10, 19, 10, 19],[21, 23, 20, 19, 12],[20, 12, 20, 11, 10]]
         let matrix = Matrix(listOfValues: input)
-        XCTAssertNotNil(matrix.matrix!)
+        XCTAssertNotNil(matrix.matrix)
         XCTAssertTrue(matrix.numberOfRows == 3)
         XCTAssertTrue(matrix.numberOfColumns == 5)
     }
