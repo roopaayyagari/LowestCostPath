@@ -12,14 +12,14 @@ import Foundation
  public class Matrix {
     public var numberOfColumns = 0
     public var numberOfRows = 0
-    public var matrix: [[Int]]?
+    public var matrix: [[Int]] = [[Int]]()
     
     init(listOfValues:[[Int]]) {
         matrix = listOfValues
-        numberOfRows = matrix!.count
+        numberOfRows = matrix.count
         
         if numberOfRows > 0{
-            numberOfColumns = (matrix?.first?.count)!
+            numberOfColumns = (matrix.first?.count)!
         }
     }
     
@@ -28,7 +28,7 @@ import Foundation
         guard index.row > -1 ,index.column > -1, index.row < numberOfRows , index.column < numberOfColumns else {
             return nil
         }
-        return self.matrix![index.row][index.column]
+        return self.matrix[index.row][index.column]
     }
     
     //MARK: Adjacent Cells

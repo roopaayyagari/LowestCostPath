@@ -12,7 +12,7 @@ import Foundation
 // Processes the matrix for least cost.
 public class MatrixProcessor {
     
-    private var inputMatrix: Matrix!
+    private var inputMatrix: Matrix  = Matrix(listOfValues: [[Int]]())
     private var numOfColumns = 0
     private var numOfRows = 0
     private var columnsProcessed = 0;
@@ -37,7 +37,7 @@ public class MatrixProcessor {
     //Calculates Minimum cost
     func processMatrix()->(path:[Int],cost:Int,pathCompleted:Bool)?{
         
-        for currentColumn in 0..<inputMatrix!.numberOfColumns{
+        for currentColumn in 0..<inputMatrix.numberOfColumns{
             let columnCosts = processColumn(column: currentColumn)
             if columnCosts.proceedNext == false {
                 break
@@ -134,7 +134,7 @@ public class MatrixProcessor {
     // Internal function to replace costs in particular column
     private func replaceColumnCosts(for column:Int , withcosts costs:[Int]) {
         for row in 0..<numOfRows {
-            inputMatrix.matrix?[row][column] = costs[row]
+            inputMatrix.matrix[row][column] = costs[row]
         }
     }
     
